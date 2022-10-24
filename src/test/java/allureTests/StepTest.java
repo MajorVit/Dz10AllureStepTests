@@ -22,19 +22,19 @@ public class StepTest {
 
         SelenideLogger.addListener("allure", new AllureSelenide());
 
-        step("Îòêðûòü ãëàâíóþ ñòðàíèöó", () -> {
+        step("ÐžÑ‚ÐºÑ€Ñ‹Ñ‚ÑŒ Ð³Ð»Ð°Ð²Ð½ÑƒÑŽ ÑÑ‚Ñ€Ð°Ð½Ð¸Ñ†Ñƒ", () -> {
 
             open("https://github.com");
         });
-        step("Íàéòè â ïîèñêå" + REP, () -> {
+        step("ÐÐ°Ð¹Ñ‚Ð¸ Ð² Ð¿Ð¾Ð¸ÑÐºÐµ" + REP, () -> {
             $(".header-search-input").click();
             $(".header-search-input").sendKeys(REP);
             $(".header-search-input").submit();
         });
-        step("Êëèêíóòü ïî ññûëêå -" + REP, () -> {
+        step("ÐšÐ»Ð¸ÐºÐ½ÑƒÑ‚ÑŒ Ð¿Ð¾ ÑÑÑ‹Ð»ÐºÐµ -" + REP, () -> {
             $(linkText(REP)).click();
         });
-        step("Íàéòè ðàçäåë Issues", () -> {
+        step("ÐÐ°Ð¹Ñ‚Ð¸ Ñ€Ð°Ð·Ð´ÐµÐ» Issues", () -> {
             $(withText("Issue")).should(Condition.exist);
         });
 

@@ -15,24 +15,24 @@ import static org.openqa.selenium.By.linkText;
 
 public class WebSteps {
 
-    @Step("Открыть главную страницу")
+    @Step("РћС‚РєСЂС‹С‚СЊ РіР»Р°РІРЅСѓСЋ СЃС‚СЂР°РЅРёС†Сѓ")
     public void openMainPage() {
         open("https://github.com");
     }
 
-    @Step("Найти в поиске")
+    @Step("РќР°Р№С‚Рё РІ РїРѕРёСЃРєРµ")
     public void searchRepository(String rep) {
         $(".header-search-input").click();
         $(".header-search-input").sendKeys(rep);
         $(".header-search-input").submit();
     }
 
-    @Step("Кликнуть по ссылке")
+    @Step("РљР»РёРєРЅСѓС‚СЊ РїРѕ СЃСЃС‹Р»РєРµ")
     public void clickOnRepositoryLink(String rep) {
         $(linkText(rep)).click();
     }
 
-    @Step("Найти раздел Issues")
+    @Step("РќР°Р№С‚Рё СЂР°Р·РґРµР» Issues")
     public void seachIssuesTab() {
         $("#issues-tab").shouldHave();
     }
